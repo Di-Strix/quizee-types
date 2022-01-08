@@ -1,0 +1,14 @@
+{
+  "name": "@di-strix/quizee-types",
+  "version": "1.0.0",
+  "description": "Types definition for the quizee application",
+  "types": "src/index.d.ts",
+  "keywords": [
+    "quizee"
+  ],
+  "author": "Andrew Ushakov",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.5.4"
+  }
+}
