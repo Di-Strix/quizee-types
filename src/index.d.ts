@@ -1,28 +1,30 @@
+export type QuizId = string;
+export type QuestionId = string;
+export type AnswerOptionId = string;
+
 export interface Quiz {
-  questions: QuizQuestion[];
-  answers: QuizAnswer[];
+  questions: Question[];
+  answers: Answer[];
   info: QuizInfo;
 }
 
-export interface QuizAnswer {
-  answer: QuizUserAnswers;
-  answerTo: string;
+export interface Answer {
+  answer: AnswerOptionId[];
+  answerTo: QuestionId;
   config: {
     equalCase: boolean;
   };
 }
 
-export interface QuizUserAnswers extends Array<string> {}
-
-export interface QuizQuestion {
+export interface Question {
   caption: string;
-  id: string;
-  type: QuizQuestionType;
-  answerOptions: QuizAnswerOption[];
+  id: QuizId;
+  type: QuestionType;
+  answerOptions: AnswerOption[];
 }
 
-export interface QuizAnswerOption {
-  id: string;
+export interface AnswerOption {
+  id: AnswerOptionId;
   value: string;
 }
 
@@ -33,7 +35,7 @@ export interface QuizInfo {
   id: string;
 }
 
-export enum QuizQuestionType {
+export enum QuestionType {
   OneTrue = 'ONE_TRUE',
   SeveralTrue = 'SEVERAL_TRUE',
   WriteAnswer = 'WRITE_ANSWER',
