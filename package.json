@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Types definition for the quizee application",
   "types": "src/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "url": "git://github.com/Di-Strix/quizee-types"
+  },
   "keywords": [
     "quizee"
   ],
