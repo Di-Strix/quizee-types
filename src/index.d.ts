@@ -1,36 +1,36 @@
 export interface Quiz {
-  content: QuizContent
-  answers: QuizAnswer[]
-}
-
-export interface QuizContent {
-  caption: string
-  questions: QuizQuestion[]
+  questions: QuizQuestion[];
+  answers: QuizAnswer[];
+  info: QuizInfo;
 }
 
 export interface QuizAnswer {
-  answer: string | number
+  answer: QuizUserAnswers;
+  answerTo: string;
   config: {
-    equalCase: boolean
-  }
+    equalCase: boolean;
+  };
 }
 
+export interface QuizUserAnswers extends Array<string> {}
+
 export interface QuizQuestion {
-  caption: string
-  type: QuizQuestionType
-  answerOptions?: QuizAnswerOption[]
+  caption: string;
+  id: string;
+  type: QuizQuestionType;
+  answerOptions: QuizAnswerOption[];
 }
 
 export interface QuizAnswerOption {
-  id: number
-  val: string
+  id: string;
+  value: string;
 }
 
 export interface QuizInfo {
-  caption: string
-  img: string
-  questionCount: number
-  quizeeId: string
+  caption: string;
+  img: string;
+  questionsCount: number;
+  id: string;
 }
 
 export enum QuizQuestionType {
