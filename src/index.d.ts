@@ -1,6 +1,7 @@
 export type QuizId = string;
 export type QuestionId = string;
 export type AnswerOptionId = string;
+export type QuestionType = 'ONE_TRUE' | 'SEVERAL_TRUE' | 'WRITE_ANSWER';
 
 export interface Quiz {
   questions: Question[];
@@ -33,10 +34,4 @@ export interface QuizInfo {
   img: string;
   questionsCount: number;
   id: string;
-}
-
-export enum QuestionType {
-  OneTrue = 'ONE_TRUE',
-  SeveralTrue = 'SEVERAL_TRUE',
-  WriteAnswer = 'WRITE_ANSWER',
 }
