@@ -2,9 +2,9 @@
   "name": "@di-strix/quizee-types",
   "version": "3.0.1",
   "description": "Types definition for the quizee application",
-  "types": "src/index.d.ts",
-  "repository": {
-    "url": "git://github.com/Di-Strix/quizee-types"
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "keywords": [
     "quizee"
