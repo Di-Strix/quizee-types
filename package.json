@@ -4,6 +4,7 @@
   "description": "Types definition for the quizee application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": "github:Di-Strix/quizee-types",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
