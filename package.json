@@ -2,6 +2,8 @@
   "name": "@di-strix/quizee-types",
   "version": "3.0.1",
   "description": "Types definition for the quizee application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
