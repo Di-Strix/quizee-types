@@ -3,6 +3,12 @@ export type QuestionId = string;
 export type AnswerOptionId = string;
 export type QuestionType = 'ONE_TRUE' | 'SEVERAL_TRUE' | 'WRITE_ANSWER';
 
+export interface DBQuiz {
+  questions: Question[];
+  answers: Answer[];
+  info: DBQuizInfo;
+}
+
 export interface Quiz {
   questions: Question[];
   answers: Answer[];
@@ -29,9 +35,11 @@ export interface AnswerOption {
   value: string;
 }
 
+export interface DBQuizInfo extends Required<QuizInfo> {}
+
 export interface QuizInfo {
   caption: string;
-  img: string;
-  questionsCount: number;
-  id: string;
+  questionsCount?: number;
+  img?: string;
+  id?: string;
 }
