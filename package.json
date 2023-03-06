@@ -1,6 +1,6 @@
 {
   "name": "@di-strix/quizee-types",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "description": "Types definition for the quizee application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
